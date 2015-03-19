@@ -1,0 +1,25 @@
+{
+        "name": "phpixie/project",
+        "type": "project",
+        "description" : "Sibngp web site",
+        "license" : "BSD",
+        "autoload": {
+                "psr-0": {"": "classes/"}
+        },
+        "require": {
+                "phpixie/core": "2.*@dev",
+                "phpixie/db": "2.*@dev",
+                "phpixie/orm": "2.*@dev",
+                "phpixie/auth":"2.*@dev",
+                "components/bootstrap":"3.2.*",
+                "monolog/monolog": "1.*"
+        },
+        "extra": {
+                "branch-alias": {
+                        "dev-master": "2.*-dev"
+                }
+        },
+        "config": {
+            "component-dir": "web/components"
+        }
+}
