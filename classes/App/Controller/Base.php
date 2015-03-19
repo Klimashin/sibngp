@@ -2,10 +2,10 @@
 
 namespace App\Controller;
 
-class Hello extends \App\Page {
+class Base extends \App\Page {
 
 	public function action_index() {
-		$this->view->subview = 'hello';
+		$this->view->subview = 'base';
 		$this->view->message = 'Have fun coding';
 	}
 
