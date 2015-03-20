@@ -1,0 +1,14 @@
+#main {
+    width: 1024px;
+    min-height: 768px;
+}
+
+#left {
+    width: 50%;
+    float: left;
+}
+
+#right {
+    width: 50%;
+    float: right;
+}
