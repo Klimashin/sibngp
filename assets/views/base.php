@@ -81,9 +81,9 @@
         <section id="recall-gallery">
             <div class="gallery">
             <?php
-                foreach ($sertificates as $sertificate) {
-                    ?><a type="button" data-toggle="modal" data-target="#sertificate-gallery-modal">
-                        <div class="gallery-item"><img src="<?= $sertificate ?>"></div>
+                foreach ($recalls as $recall) {
+                    ?><a type="button" data-toggle="modal" data-target="#recall-gallery-modal">
+                        <div class="gallery-item"><img src="<?= $recall ?>"></div>
                       </a><?php
                 }
             ?>

@@ -12,6 +12,11 @@ class Base extends \App\Page
             $serts[] = '/assets/img/sertificates/jpg/' . $file;
         }
 
+        foreach (scandir(dirname(realpath('index.php')) . '/assets/img/recalls/jpg') as $file) {
+            $recalls[] = '/assets/img/recalls/jpg/' . $file;
+        }
+
         $this->view->sertificates = $serts;
+        $this->view->recalls = $recalls;
     }
 }
