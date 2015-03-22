@@ -94,13 +94,15 @@ header.navbar {
     width: 140px;
 }
 
+#sertificate-gallery, #recall-gallery {
+    background-color: #284d94;
+}
+
+/* slick */
 .slick-slider {
     margin: 30px 0 30px 10px;
-}
-.slick-next, .slick-prev {
-    background: grey repeat scroll 0% 0% !important;
 }
 .slick-next {
     right: -7px;
 }
-/*endofsection*/
+/* endofsection */
