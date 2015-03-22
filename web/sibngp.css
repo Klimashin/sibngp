@@ -2,6 +2,11 @@ body {
     background-color: #eee;
 }
 
+h1 {
+    font-size: 30px;
+    margin-top: 0;
+}
+
 header.navbar {
     margin-bottom: 0;
     background: #284d94;
@@ -123,9 +128,9 @@ header.navbar {
 
 /* slick */
 .slick-slider {
-    margin: 30px 0 30px 10px;
+    margin: 30px 0 30px 13px;
 }
 .slick-next {
-    right: -7px;
+    right: -13px;
 }
 /* endofsection */
