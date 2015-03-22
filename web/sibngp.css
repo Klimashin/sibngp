@@ -60,7 +60,6 @@ header.navbar {
     width: 512px;
 }
 
-<<<<<<< HEAD
 .gallery-item img {
     cursor: pointer;
 }
@@ -90,10 +89,11 @@ header.navbar {
    left: 5px;
 }
 
-/*overriding slick base styels section*/
-=======
-/*overriding slick base styles section*/
->>>>>>> Add content
+#sertificate-gallery img, #recall-gallery img {
+    height: 198px;
+    width: 140px;
+}
+
 .slick-slider {
     margin: 30px 0 30px 10px;
 }
