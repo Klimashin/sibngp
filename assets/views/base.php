@@ -11,6 +11,40 @@
         <div id="logo">Сибнефтегазпроект</div>
     </div>
 </header>
+
+<div class="modal fade" id="sertificate-gallery-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <?php
+            foreach ($sertificates as $sertificate) {
+                ?><div class="gallery-item"><img width="800" height="600" src="<?= $sertificate ?>"></div><?php
+            }
+            ?>
+        </div>     
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="recall-gallery-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <?php
+            foreach ($sertificates as $sertificate) {
+                ?><div class="gallery-item"><img width="800" height="600" src="<?= $sertificate ?>"></div><?php
+            }
+            ?>
+        </div>     
+    </div>
+  </div>
+</div>
 <section id="content">
     <div id="left">
         <section id="about-us">
@@ -20,7 +54,9 @@
             <div class="gallery">
             <?php
                 foreach ($sertificates as $sertificate) {
-                    ?><div class="gallery-item"><img src="<?= $sertificate ?>"></div><?php
+                    ?><a type="button" data-toggle="modal" data-target="#sertificate-gallery-modal">
+                        <div class="gallery-item"><img src="<?= $sertificate ?>"></div>
+                      </a><?php
                 }
             ?>
             </div>
@@ -46,7 +82,9 @@
             <div class="gallery">
             <?php
                 foreach ($sertificates as $sertificate) {
-                    ?><div class="gallery-item"><img src="<?= $sertificate ?>"></div><?php
+                    ?><a type="button" data-toggle="modal" data-target="#sertificate-gallery-modal">
+                        <div class="gallery-item"><img src="<?= $sertificate ?>"></div>
+                      </a><?php
                 }
             ?>
             </div>
@@ -70,6 +108,12 @@
         speed: 300,
         slidesToShow: 3,
         slidesToScroll: 1,
+      });
+      
+      $('#sertificate-gallery-modal .modal-body, #recall-gallery-modal .modal-body').slick({
+        dots: false,
+        infinite: true,
+        speed: 500,
       });
     });
   </script>

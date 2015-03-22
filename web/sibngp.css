@@ -64,6 +64,35 @@ header.navbar {
     width: 512px;
 }
 
+.gallery-item img {
+    cursor: pointer;
+}
+
+.modal-header {
+    border: none;
+}
+
+.modal-header .close {
+    margin-top: -10px;
+}
+
+.modal-body {
+    padding: 0 30px;
+    margin-left: 20px;   
+}
+
+.modal-body.slick-slider {
+    margin-top: 0;
+}
+
+.modal-body .slick-next {
+    right: 25px;
+}
+
+.modal-body .slick-prev {
+   left: 5px;
+}
+
 /*overriding slick base styels section*/
 .slick-slider {
     margin-bottom: 30px;
