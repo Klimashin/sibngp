@@ -1,11 +1,29 @@
+body {
+    background-color: #eee;
+}
+
 header.navbar {
     margin-bottom: 0;
+    background: #284d94;
+    border-radius: 0;
+    border: 0;
+}
+
+.navbar-default .navbar-nav>li:hover {
+    background-color: #001A61;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
 }
 
 #main {
     width: 1024px;
     min-height: 768px;
     padding: 0;
+    background-color: #fff;
 }
 
 #main section {
@@ -19,6 +37,13 @@ header.navbar {
 #logo {
     display: inline;
     width: auto;
+    background-color: #284d94;
+    float: right;
+    color: white;
+    text-transform: uppercase;
+    height: 50px;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 #left {
@@ -29,6 +54,10 @@ header.navbar {
 #right {
     width: 50%;
     float: right;
+}
+
+#main #content section:not(#motivation) {
+    padding: 20px;
 }
 
 #motivation img {
