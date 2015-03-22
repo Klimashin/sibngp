@@ -117,7 +117,6 @@ $(document).ready(function(){
     });
 
     $('a[data-toggle="modal"]').click(function(e) {
-        console.log($(this).data('target') + ' .modal-body');
         $($(this).data('target') + ' .modal-body').slick('slickGoTo', $(this).data('slick-index'), false);
     });
 });
