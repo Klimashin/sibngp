@@ -14,6 +14,11 @@ class Base extends \App\Page
         
         unset($serts[0]); unset($serts[1]); // unset . and ..
 
+        foreach (scandir(dirname(realpath('index.php')) . '/assets/img/recalls/jpg') as $file) {
+            $recalls[] = '/assets/img/recalls/jpg/' . $file;
+        }
+
         $this->view->sertificates = $serts;
+        $this->view->recalls = $recalls;
     }
 }
