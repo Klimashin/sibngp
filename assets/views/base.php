@@ -12,7 +12,7 @@
     </div>
 </header>
 
-<div class="modal fade" id="sertificate-gallery-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="sertificate-gallery-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
         <div class="modal-header">
@@ -29,7 +29,7 @@
   </div>
 </div>
 
-<div class="modal fade" id="recall-gallery-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade" id="recall-gallery-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
         <div class="modal-header">
@@ -37,8 +37,8 @@
         </div>
         <div class="modal-body">
           <?php
-            foreach ($sertificates as $sertificate) {
-                ?><div class="gallery-item"><img width="840" height="1188" src="<?= $sertificate ?>"></div><?php
+            foreach ($recalls as $recall) {
+                ?><div class="gallery-item"><img width="840" height="1188" src="<?= $recall ?>"></div><?php
             }
             ?>
         </div>     
@@ -117,6 +117,7 @@ $(document).ready(function(){
     });
 
     $('a[data-toggle="modal"]').click(function(e) {
+        console.log($(this).data('target') + ' .modal-body');
         $($(this).data('target') + ' .modal-body').slick('slickGoTo', $(this).data('slick-index'), false);
     });
 });
