@@ -42,9 +42,14 @@ header.navbar {
     float: right;
     color: white;
     text-transform: uppercase;
-    height: 50px;
     font-size: 32px;
     font-weight: bold;
+    padding-top: 5px;
+}
+
+#logo>img {
+    vertical-align: top;
+    padding-right: 5px;
 }
 
 #left {
