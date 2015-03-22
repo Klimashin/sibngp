@@ -6,9 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>СибНГП</title>
         <link href="components/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="components/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="sibngp.css" rel="stylesheet">
+        <link href="components/bootstrap/css/bootstrap.min.css" rel="stylesheet">        
         <link href="assets/slick/slick.css" rel="stylesheet">
+        <link href="assets/slick/slick-theme.css" rel="stylesheet">
+        <link href="sibngp.css" rel="stylesheet">
         <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />     
         <script src="components/jquery/jquery.min.js"></script>
         <script src="components/bootstrap/js/bootstrap.min.js"></script>       

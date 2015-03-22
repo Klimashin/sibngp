@@ -12,6 +12,10 @@ header.navbar {
     min-height: 200px;
 }
 
+#sertificate-gallery, #recall-gallery {
+    padding: 0 20px;
+}
+
 #logo {
     display: inline;
     width: auto;
@@ -30,3 +34,16 @@ header.navbar {
 #motivation img {
     width: 512px;
 }
+
+/*overriding slick base styels section*/
+.slick-slider {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.slick-next, .slick-prev {
+    background: grey repeat scroll 0% 0% !important;
+}
+.slick-next {
+    right: -5px;
+}
+/*endofsection*/

@@ -16,7 +16,13 @@
             About Us
         </section>
         <section id="sertificate-gallery">
-            Sertificates
+            <div class="gallery">
+            <?php
+                foreach ($sertificates as $sertificate) {
+                    ?><div class="gallery-item"><img src="<?= $sertificate ?>"></div><?php
+                }
+            ?>
+            </div>
         </section>
         <section id="information">
             Information
@@ -30,10 +36,27 @@
             <img src="//sdelanounas.ru/i/c/2/c2RlbGFub3VuYXMucnUvdXBsb2Fkcy84LzYvODYzMTM0ODIzNzI0MS5qcGVn.jpg">
         </section>
         <section id="recall-gallery">
-            Recalls
+            <div class="gallery">
+            <?php
+                foreach ($sertificates as $sertificate) {
+                    ?><div class="gallery-item"><img src="<?= $sertificate ?>"></div><?php
+                }
+            ?>
+            </div>
         </section>
         <section id="contacts">
             Contacts
         </section>
     </div>
 </section>
+ <script type="text/javascript">
+    $(document).ready(function(){
+      $('.gallery').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      });
+    });
+  </script>
