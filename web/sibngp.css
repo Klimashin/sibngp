@@ -60,7 +60,6 @@ header.navbar {
     width: 512px;
 }
 
-<<<<<<< HEAD
 .gallery-item img {
     cursor: pointer;
 }
@@ -91,9 +90,6 @@ header.navbar {
 }
 
 /*overriding slick base styels section*/
-=======
-/*overriding slick base styles section*/
->>>>>>> Add content
 .slick-slider {
     margin: 30px 0 30px 10px;
 }

@@ -21,7 +21,7 @@
         <div class="modal-body">
           <?php
             foreach ($sertificates as $sertificate) {
-                ?><div class="gallery-item"><img width="800" height="600" src="<?= $sertificate ?>"></div><?php
+                ?><div class="gallery-item"><img width="840" height="1188" src="<?= $sertificate ?>"></div><?php
             }
             ?>
         </div>     
@@ -38,7 +38,7 @@
         <div class="modal-body">
           <?php
             foreach ($sertificates as $sertificate) {
-                ?><div class="gallery-item"><img width="800" height="600" src="<?= $sertificate ?>"></div><?php
+                ?><div class="gallery-item"><img width="840" height="1188" src="<?= $sertificate ?>"></div><?php
             }
             ?>
         </div>     
