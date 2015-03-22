@@ -51,6 +51,7 @@
             <h1>О Нас</h1>
         </section>
         <section id="sertificate-gallery">
+            <h1>Сертификаты</h1>
             <div class="gallery">
             <?php
                 foreach ($sertificates as $sertificate) {
@@ -100,6 +101,7 @@
             </ol>
         </section>
         <section id="recall-gallery">
+            <h1>Отзывы</h1>
             <div class="gallery">
             <?php
                 foreach ($recalls as $recall) {
