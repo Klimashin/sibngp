@@ -89,7 +89,11 @@ header.navbar {
    left: 5px;
 }
 
-/*overriding slick base styels section*/
+#sertificate-gallery img, #recall-gallery img {
+    height: 198px;
+    width: 140px;
+}
+
 .slick-slider {
     margin: 30px 0 30px 10px;
 }
