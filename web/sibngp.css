@@ -1,6 +1,20 @@
+header.navbar {
+    margin-bottom: 0;
+}
+
 #main {
     width: 1024px;
     min-height: 768px;
+    padding: 0;
+}
+
+#main section {
+    min-height: 200px;
+}
+
+#logo {
+    display: inline;
+    width: auto;
 }
 
 #left {
@@ -11,4 +25,8 @@
 #right {
     width: 50%;
     float: right;
+}
+
+#motivation img {
+    width: 512px;
 }

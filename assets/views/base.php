@@ -12,9 +12,28 @@
 </header>
 <section id="content">
     <div id="left">
-        <?= $message ?>
+        <section id="about-us">
+            About Us
+        </section>
+        <section id="sertificate-gallery">
+            Sertificates
+        </section>
+        <section id="information">
+            Information
+        </section>
+        <section id="vacancies">
+            Vacancies
+        </section>
     </div>
     <div id="right">
-        <?= $message ?>
+        <section id="motivation">
+            <img src="//sdelanounas.ru/i/c/2/c2RlbGFub3VuYXMucnUvdXBsb2Fkcy84LzYvODYzMTM0ODIzNzI0MS5qcGVn.jpg">
+        </section>
+        <section id="recall-gallery">
+            Recalls
+        </section>
+        <section id="contacts">
+            Contacts
+        </section>
     </div>
 </section>
