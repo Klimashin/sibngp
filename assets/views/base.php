@@ -101,19 +101,23 @@
     </div>
 </section>
  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.gallery').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-      });
-      
-      $('#sertificate-gallery-modal .modal-body, #recall-gallery-modal .modal-body').slick({
-        dots: false,
-        infinite: true,
-        speed: 500,
-      });
+$(document).ready(function(){
+    $('.gallery').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
     });
+
+    $('#sertificate-gallery-modal .modal-body, #recall-gallery-modal .modal-body').slick({
+      dots: false,
+      infinite: true,
+      speed: 500,
+    });
+
+    $('a[data-toggle="modal"]').click(function(e) {
+        $($(this).data('target') + ' .modal-body').slick('slickGoTo', $(this).data('slick-index'), false);
+    });
+});
   </script>
