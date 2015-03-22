@@ -1,11 +1,11 @@
 <header class="navbar navbar-default">
     <div class="container-fluid">
         <div id="navbar">
-            <ul class="navbar-nav nav">
-                <li><a href="#">Lorem</a></li>
-                <li><a href="#">Ipsum</a></li>
-                <li><a href="#">Dolor</a></li>
-                <li><a href="#">Sit</a></li>
+            <ul class="navbar-nav nav">                
+                <li><a href="#information">О предприятии</a></li>
+                <li><a href="#partners">Партнеры</a></li>
+                <li><a href="#vacancies">Вакансии</a></li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
         </div>
         <div id="logo">Сибнефтегазпроект</div>
@@ -48,7 +48,7 @@
 <section id="content">
     <div id="left">
         <section id="about-us">
-            About Us
+            <h1>О Нас</h1>
         </section>
         <section id="sertificate-gallery">
             <div class="gallery">
@@ -71,7 +71,8 @@
                 <p>ООО «Сибнефтегазпроект» является членом некоммерческого партнерства по защите прав и законных интересов лиц, осуществляющих подготовку проектной документации — Томское проектное объединение по повышению качества проектной продукции» (саморегупируемая организация). Имеет сертификат соответствия требованиям ГОСТ Р ИСО 9001-2001(1509001-2000), ГОСТ Р ИСО 14001-2007 (150 14001:2004), ГОСТ 12.0.230-2007, ОН5А5 18001:2007.</p>
         </section>
         <section id="vacancies">
-            Vacancies
+            <h1>Вакансии</h1>
+            <p>В настоящее время вакансий нет</p>
         </section>
     </div>
     <div id="right">
@@ -138,6 +139,18 @@ $(document).ready(function(){
 
     $('a[data-toggle="modal"]').click(function(e) {
         $($(this).data('target') + ' .modal-body').slick('slickGoTo', $(this).data('slick-index'), false);
+    });
+    
+    $('.modal.fade').scroll(function (e) {        
+        var top = $(this).scrollTop() / 1000 * 100;
+        if (top < 30) { top = 30; }
+        if (top > 80) { top = 80; }
+        console.log(top);
+        $('.modal-body .slick-prev, .modal-body .slick-next').css('top', top + '%');
+    });
+    
+    $(document).on('shown.bs.modal', function () {
+        $('.modal.fade').trigger('scroll');
     });
 });
   </script>

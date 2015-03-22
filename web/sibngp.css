@@ -89,6 +89,29 @@ header.navbar {
    left: 5px;
 }
 
+.modal-content .slick-next, .modal-content .slick-prev {
+    opacity: 1;
+    background: none !important;
+    position: fixed;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.modal-content .slick-next {
+    right: -60px
+}
+
+.modal-content .slick-prev {
+    left: -60px;
+}
+
+.modal-content .slick-next:before, .modal-content .slick-prev:before {
+    color: black;
+    opacity: 1;
+    font-size: 60px;
+}
+
 #sertificate-gallery img, #recall-gallery img {
     height: 198px;
     width: 140px;
