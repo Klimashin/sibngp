@@ -36,15 +36,8 @@ header.navbar {
 }
 
 #logo {
-    display: inline;
     width: auto;
     background-color: #284d94;
-    float: right;
-    color: white;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: bold;
-    padding-top: 5px;
 }
 
 #logo>img {
@@ -68,6 +61,7 @@ header.navbar {
 
 #motivation img {
     width: 512px;
+    cursor: pointer;
 }
 
 .gallery-item img {

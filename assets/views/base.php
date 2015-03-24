@@ -1,4 +1,4 @@
-<header class="navbar navbar-default">
+<!--<header class="navbar navbar-default">
     <div class="container-fluid">
         <div id="navbar">
             <ul class="navbar-nav nav">                
@@ -8,10 +8,10 @@
                 <li><a href="#contacts">Контакты</a></li>
             </ul>
         </div>
-        <div id="logo"><img src="/assets/img/icon.png">Сибнефтегазпроект</div>
+        
     </div>
-</header>
-
+</header>-->
+<!--[if gt IE8]>-->
 <div class="modal fade" id="sertificate-gallery-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -45,13 +45,19 @@
     </div>
   </div>
 </div>
+<!--<![endif]-->
 <section id="content">
     <div id="left">
+        <div id="logo"><img width="512" src="/assets/img/logo.png"></div>
         <section id="about-us">
             <h1>О Нас</h1>
         </section>
-        <section id="sertificate-gallery">
+        <section id="sertificate-gallery">            
             <h1>Сертификаты</h1>
+            <!--[if lse IE8]>
+            <p>Ваш браузер устарел. Пожалуйста, обновите его, чтобы отобразить этот блок.</p>
+            <![endif]-->
+            <!--[if gt IE8]>-->
             <div class="gallery">
             <?php
                 foreach ($sertificates as $sertificate) {
@@ -61,6 +67,7 @@
                 }
             ?>
             </div>
+            <!--<![endif]-->
         </section>
         <section id="information">
             <h1>Кратко о предприятии</h1>
@@ -70,6 +77,7 @@
                 <p>Наша организация характеризуется гибкой финансовой политикой по отношению к заказчику.</p>
                 <p>Проекты выполняются посредством современного комплекса лицензионного программного обеспечения. Благодаря сильному инженерному составу и серьезному контролю качества, мы выпускаем проектную документацию полностью соответствующую требованиям и стандартам качества.</p>
                 <p>ООО «Сибнефтегазпроект» является членом некоммерческого партнерства по защите прав и законных интересов лиц, осуществляющих подготовку проектной документации — Томское проектное объединение по повышению качества проектной продукции» (саморегупируемая организация). Имеет сертификат соответствия требованиям ГОСТ Р ИСО 9001-2001(1509001-2000), ГОСТ Р ИСО 14001-2007 (150 14001:2004), ГОСТ 12.0.230-2007, ОНSАS 18001:2007.</p>
+            </div>
         </section>
         <section id="vacancies">
             <h1>Вакансии</h1>
@@ -78,7 +86,7 @@
     </div>
     <div id="right">
         <section id="motivation">
-            <img src="//sdelanounas.ru/i/c/2/c2RlbGFub3VuYXMucnUvdXBsb2Fkcy84LzYvODYzMTM0ODIzNzI0MS5qcGVn.jpg">
+            <img width="512px" src="/assets/img/slides/1.jpg">
         </section>
         <section id="partners">
             <h1>Наши партнеры</h1>
@@ -102,6 +110,10 @@
         </section>
         <section id="recall-gallery">
             <h1>Отзывы</h1>
+            <!--[if lse IE8]>
+            <p>Ваш браузер устарел. Пожалуйста, обновите его, чтобы отобразить этот блок.</p>
+            <![endif]-->
+            <!--[if gt IE8]>-->
             <div class="gallery">
             <?php
                 foreach ($recalls as $recall) {
@@ -111,6 +123,7 @@
                 }
             ?>
             </div>
+            <!--<![endif]-->
         </section>
         <section id="contacts">
             <h1>Реквизиты и контактная информация</h1>
@@ -131,6 +144,17 @@ $(document).ready(function(){
       speed: 300,
       slidesToShow: 3,
       slidesToScroll: 1,
+    });
+    
+    var currentSlide = 0;
+    $('#motivation>img').click(function (e) {
+        var slides = <?= json_encode($slides) ?>;            
+        
+        currentSlide++;
+        console.log(slides.length, slides);
+        if (currentSlide >= slides.length) { currentSlide = 0 }
+        
+        $(this).attr('src', slides[currentSlide]);       
     });
 
     $('#sertificate-gallery-modal .modal-body, #recall-gallery-modal .modal-body').slick({

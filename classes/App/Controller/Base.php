@@ -6,18 +6,27 @@ class Base extends \App\Page
     public function action_index()
     {
         $this->view->subview = 'base';
-        $this->view->message = 'Have fun coding';
-
-        foreach (scandir(dirname(realpath('index.php')) . '/assets/img/sertificates/jpg') as $file) {
+        
+        $imgDir = dirname(realpath('index.php')) . '/assets/img';
+        
+        foreach (scandir($imgDir . '/sertificates/jpg') as $file) {
+            if (in_array($file, ['.', '..'])) { continue; }
             $serts[] = '/assets/img/sertificates/jpg/' . $file;
         }      
-        unset($serts[0]); unset($serts[1]); // unset . and ..
 
-        foreach (scandir(dirname(realpath('index.php')) . '/assets/img/recalls/jpg') as $file) {
+        foreach (scandir($imgDir . '/recalls/jpg') as $file) {
+            if (in_array($file, ['.', '..'])) { continue; }
             $recalls[] = '/assets/img/recalls/jpg/' . $file;
         }
-        unset($recalls[0]); unset($recalls[1]); // unset . and ..
-
+        
+        foreach (scandir($imgDir . '/slides') as $file) {
+            if (in_array($file, ['.', '..'])) { continue; }
+            $slides[] = '/assets/img/slides/' . $file;
+        }
+        $slides['length'] = count($slides);
+        
+        $this->view->slides = $slides;
+        $this->view->logo = '/assets/img/logo.png';
         $this->view->sertificates = $serts;
         $this->view->recalls = $recalls;
     }
