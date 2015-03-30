@@ -8,7 +8,7 @@
         <div class="modal-body">
           <?php
             foreach ($sertificates as $sertificate) {
-                ?><div class="gallery-item"><img width="840" height="1188" src="<?= $sertificate ?>"></div><?php
+                ?><div class="gallery-item"><img src="<?= $sertificate ?>"></div><?php
             }
             ?>
         </div>     
@@ -25,7 +25,7 @@
         <div class="modal-body">
           <?php
             foreach ($recalls as $recall) {
-                ?><div class="gallery-item"><img width="840" height="1188" src="<?= $recall ?>"></div><?php
+                ?><div class="gallery-item"><img src="<?= $recall ?>"></div><?php
             }
             ?>
         </div>     
@@ -35,7 +35,7 @@
 <!--<![endif]-->
 <section id="content">
     <div id="left">
-        <div id="logo"><img width="512" src="/assets/img/logo.png"></div>
+        <div id="logo"><img src="/assets/img/logo.png"></div>
         <section id="about-us">
             <h1>Основные направления деятельности нашего предприятия</h1> 
             </p>Проектирование опасных производственных объектов нефтегазовой и нефтехимической отраслей, в том числе:</p>
@@ -138,11 +138,20 @@
  <script type="text/javascript">
 $(document).ready(function(){
     $('.gallery').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },                
+            }
+        ]
     });
     
     var currentSlide = 0;
