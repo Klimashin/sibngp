@@ -10,11 +10,13 @@
         <link href="assets/slick/slick.css" rel="stylesheet">
         <link href="assets/slick/slick-theme.css" rel="stylesheet">
         <link href="sibngp.css" rel="stylesheet">
-        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />     
+        <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+        <!--[if gte IE 9]><!-->
         <script src="components/jquery/jquery.min.js"></script>
         <script src="components/bootstrap/js/bootstrap.min.js"></script>       
         <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
         <script src="assets/slick/slick.min.js"></script>
+        <!--<![endif]-->
     </head>
     <body>
         <section id="main" class="container">
