@@ -11,7 +11,7 @@
                 ?><div class="gallery-item"><img src="<?= $sertificate ?>"></div><?php
             }
             ?>
-        </div>     
+        </div>
     </div>
   </div>
 </div>
@@ -28,7 +28,7 @@
                 ?><div class="gallery-item"><img src="<?= $recall ?>"></div><?php
             }
             ?>
-        </div>     
+        </div>
     </div>
   </div>
 </div>
@@ -37,7 +37,7 @@
     <div id="left">
         <div id="logo"><img src="/assets/img/logo.png"></div>
         <section id="about-us">
-            <h1>Основные направления деятельности нашего предприятия</h1> 
+            <h1>Основные направления деятельности нашего предприятия</h1>
             </p>Проектирование опасных производственных объектов нефтегазовой и нефтехимической отраслей, в том числе:</p>
             <ul>
                 <li>Проектирование объектов нефтегазодобычи;</li>
@@ -50,7 +50,7 @@
             <p>Ведущими инженерами-проектировщиками 000 "Сибнефтегазпроект" производится постоянный контроль выполнения проектной документации в соответствии с нормами, требованиями и правилами, установленными нормативными документами, в соответствии с постановлением Правительства РФ от 16.02.2008 № 87 «О составе разделов проектной документаци и требованиях к их сoдержанию», положением «0 порядке рассмотрения проектной документации потенциально опасных производств в химической, нефтехимической и нефтеперерабатывающей промышленности» и другими руководящими документами.</p>
             <p>Подготовка проектной документации осуществляется в соответствии с законодательством Российской Федерации о государственной тайне.</p>
         </section>
-        <section id="sertificate-gallery">            
+        <section id="sertificate-gallery">
             <h1>Сертификаты</h1>
             <!--[if !IE 9]>
             <p>Ваш браузер устарел. Пожалуйста, обновите его, чтобы отобразить этот блок.</p>
@@ -135,7 +135,7 @@
     </div>
 </section>
 <!--[if gte IE 9]><!-->
- <script type="text/javascript">
+<script type="text/javascript">
 $(document).ready(function(){
     $('.gallery').slick({
         dots: false,
@@ -148,44 +148,42 @@ $(document).ready(function(){
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1,
-                },                
+                    slidesToScroll: 1
+                }
             }
         ]
     });
-    
+
     var currentSlide = 0;
     $('#motivation>img').click(function (e) {
-        var slides = <?= json_encode($slides) ?>;            
-        
+        var slides = <?= json_encode($slides) ?>;
+
         currentSlide++;
-        console.log(slides.length, slides);
-        if (currentSlide >= slides.length) { currentSlide = 0 }
-        
-        $(this).attr('src', slides[currentSlide]);       
+        if (currentSlide >= slides.length) { currentSlide = 0; }
+
+        $(this).attr('src', slides[currentSlide]);
     });
 
     $('#sertificate-gallery-modal .modal-body, #recall-gallery-modal .modal-body').slick({
       dots: false,
       infinite: true,
-      speed: 500,
+      speed: 500
     });
 
     $('a[data-toggle="modal"]').click(function(e) {
         $($(this).data('target') + ' .modal-body').slick('slickGoTo', $(this).data('slick-index'), false);
     });
-    
-    $('.modal.fade').scroll(function (e) {        
+
+    $('.modal.fade').scroll(function (e) {
         var top = $(this).scrollTop() / 1000 * 100;
         if (top < 30) { top = 30; }
         if (top > 80) { top = 80; }
-        console.log(top);
         $('.modal-body .slick-prev, .modal-body .slick-next').css('top', top + '%');
     });
-    
+
     $(document).on('shown.bs.modal', function () {
         $('.modal.fade').trigger('scroll');
     });
 });
-  </script>
+</script>
 <!--<![endif]-->
