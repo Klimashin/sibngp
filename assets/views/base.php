@@ -58,7 +58,7 @@
             <!--[if gte IE 9]><!-->
             <div class="gallery">
             <?php
-                foreach ($sertificates as $sertificate) {
+                foreach ($sertThumbs as $sertificate) {
                     ?><a type="button" data-toggle="modal" data-target="#sertificate-gallery-modal">
                         <div class="gallery-item"><img src="<?= $sertificate ?>"></div>
                       </a><?php
@@ -84,7 +84,7 @@
     </div>
     <div id="right">
         <section id="motivation">
-            <img width="512px" src="/assets/img/slides/1.jpg">
+            <img width="512px" src="<?= $slides[0] ?>">
         </section>
         <section id="partners">
             <h1>Наши партнеры</h1>
@@ -114,7 +114,7 @@
             <!--[if gte IE 9]><!-->
             <div class="gallery">
             <?php
-                foreach ($recalls as $recall) {
+                foreach ($recallThumbs as $recall) {
                     ?><a type="button" data-toggle="modal" data-target="#recall-gallery-modal">
                         <div class="gallery-item"><img src="<?= $recall ?>"></div>
                       </a><?php
