@@ -8,7 +8,9 @@
         <div class="modal-body">
           <?php
             foreach ($sertificates as $sertificate) {
-                ?><div class="gallery-item"><img src="<?= $sertificate ?>"></div><?php
+                ?><div class="gallery-item">
+                    <img src="<?= $sertificate ?>" class="img-responsive" alt="sertificate">
+                </div><?php
             }
             ?>
         </div>
@@ -25,7 +27,9 @@
         <div class="modal-body">
           <?php
             foreach ($recalls as $recall) {
-                ?><div class="gallery-item"><img src="<?= $recall ?>"></div><?php
+                ?><div class="gallery-item">
+                    <img src="<?= $recall ?>" class="img-responsive" alt="sertificate">
+                </div><?php
             }
             ?>
         </div>
@@ -56,7 +60,7 @@
             <p>Ваш браузер устарел. Пожалуйста, обновите его, чтобы отобразить этот блок.</p>
             <![endif]-->
             <!--[if gte IE 9]><!-->
-            <div class="gallery">
+            <div class="gallery hidden-sm hidden-xs">
             <?php
                 foreach ($sertThumbs as $sertificate) {
                     ?><a type="button" data-toggle="modal" data-target="#sertificate-gallery-modal">
@@ -65,6 +69,8 @@
                 }
             ?>
             </div>
+            <a class="visible-sm visible-xs" tabindex="0" role="button"
+               data-toggle="modal" data-target="#sertificate-gallery-modal">Открыть галерею сертификатов</a>
             <!--<![endif]-->
         </section>
         <section id="information">
@@ -78,7 +84,7 @@
             </div>
         </section>
         <section id="vacancies">
-            <h1>Вакансии</h1>
+            <h1 hidden-sm hidden-xs>Вакансии</h1>
             <p>В настоящее время вакансий нет</p>
         </section>
     </div>
@@ -107,12 +113,12 @@
             </ol>
         </section>
         <section id="recall-gallery">
-            <h1>Отзывы</h1>
+            <h1 hidden-sm hidden-xs>Отзывы</h1>
             <!--[if !IE 9]>
             <p>Ваш браузер устарел. Пожалуйста, обновите его, чтобы отобразить этот блок.</p>
             <![endif]-->
             <!--[if gte IE 9]><!-->
-            <div class="gallery">
+            <div class="gallery hidden-sm hidden-xs">
             <?php
                 foreach ($recallThumbs as $recall) {
                     ?><a type="button" data-toggle="modal" data-target="#recall-gallery-modal">
@@ -121,6 +127,8 @@
                 }
             ?>
             </div>
+            <a class="visible-sm visible-xs" tabindex="0" role="button"
+               data-toggle="modal" data-target="#sertificate-gallery-modal">Открыть галерею отзывов</a>
             <!--<![endif]-->
         </section>
         <section id="contacts">
@@ -165,9 +173,9 @@ $(document).ready(function(){
     });
 
     $('#sertificate-gallery-modal .modal-body, #recall-gallery-modal .modal-body').slick({
-      dots: false,
-      infinite: true,
-      speed: 500
+        dots: false,
+        infinite: true,
+        speed: 500
     });
 
     $('a[data-toggle="modal"]').click(function(e) {
