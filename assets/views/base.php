@@ -150,16 +150,7 @@ $(document).ready(function(){
         infinite: true,
         speed: 300,
         slidesToShow: 3,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
+        slidesToScroll: 1
     });
 
     var currentSlide = 0;
@@ -191,6 +182,7 @@ $(document).ready(function(){
 
     $(document).on('shown.bs.modal', function () {
         $('.modal.fade').trigger('scroll');
+        $(window).trigger('resize');
     });
 });
 </script>
